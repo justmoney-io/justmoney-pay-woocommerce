@@ -1,6 +1,6 @@
 # JustMoney Pay WooCommerce Payment Gateway Plugin
 
-![Widget sample](small_dark.jpg)
+![Banner](justmoney_pay/small_dark.jpg)
 
 ### Installation
 
