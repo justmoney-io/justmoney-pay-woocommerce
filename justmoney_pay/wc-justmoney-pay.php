@@ -301,14 +301,13 @@ function woocommerce_justmoney_pay() {
                     return;
                 }
 
-                $order->update_status( 'completed' );
                 $order->payment_complete();
                 $order->add_order_note( __( 'JustMoneyPay transaction ID: ' . $refNo ),false, false );
                 $order->add_order_note( __( "Order payment is completed." ), false, false );
                 $order->save();
                 echo $postParams['secret'];
                 exit();
-            } else if($order->has_status( 'completed' )) {
+            } else if($order->has_status( 'completed' ) || $order->has_status( 'processing' )) {
                 echo $postParams['secret'];
                 exit();
             }
@@ -351,7 +350,6 @@ function woocommerce_justmoney_pay() {
 			$redirect_url = $order->get_checkout_order_received_url();
 			if ( wp_redirect( $redirect_url ) ) {
 				if ( $order->has_status( 'pending' ) ) {
-				    $order->update_status( 'completed' );
                     $order->payment_complete();
                     $order->add_order_note( __( 'JustMoney Pay transaction ID: ' . $refNo ),false, false );
                     $order->add_order_note( __( "Order payment is completed." ), false, false );
