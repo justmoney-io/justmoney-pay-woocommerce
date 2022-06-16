@@ -58,7 +58,7 @@ function woocommerce_justmoney_pay() {
 			$this->id         = self::PAYMENT_METHOD_ID;
 			$this->icon       = apply_filters( 'woocommerce_justmoneypay_icon',
 				plugin_dir_url( __FILE__ ) . "jm-100x38.svg" );
-			$this->has_fields = true;
+			$this->has_fields = false;
 
 			// Load the settings
 			$this->init_form_fields();
@@ -92,7 +92,7 @@ function woocommerce_justmoney_pay() {
 			add_action( 'woocommerce_update_options_payment_gateways_' . $this->id,
 				[
 					$this,
-					'admin_options',
+					'process_admin_options',
 				] );
 
 			// Payment listener/API hook
