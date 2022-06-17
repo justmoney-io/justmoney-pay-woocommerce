@@ -9,7 +9,7 @@
 3. Got to WooCommerce -> Settings -> Payments and enable JustMoney Pay plugin.
 4. Click manage button
 5. Enter your EVM (BSC and Polygon) wallet address in format starting with 0x and Tron wallet address starting with T.  
-Both wallet addresses needs to be given in order plugin to work.
+Both wallet addresses needs to be given in order for the plugin to work.
 6. You have now configured JustMoney Pay and you can start accepting crypto payments.
 
 
