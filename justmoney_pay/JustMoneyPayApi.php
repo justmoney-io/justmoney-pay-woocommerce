@@ -7,7 +7,7 @@
  */
 class JustMoneyPay_Api {
 
-	const   API_URL = 'https://api-pay.just.money/v1/checkout';
+	const API_URL = 'https://api-pay.just.money/v1/checkout';
 
 
 	/**
