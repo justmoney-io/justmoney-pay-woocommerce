@@ -187,7 +187,6 @@ function woocommerce_justmoney_pay() {
                 $api = new JustMoneyPay_Api();
                 $jm_order_data = $api->call( 'newOrder', $api_params, 'POST' );
 
-                print_r($jm_order_data);
 				if (!$jm_order_data) {
 				        wc_add_notice( 'There has been an error processing your order', $notice_type = 'error' );
 
